@@ -1,0 +1,30 @@
+"""
+s = input("Enter a 3 digit integer:  ") # get number
+ 
+digits = [] # create list to store digits
+ 
+# parse the digits from input s to list of digits
+for d in s:
+    digits.append( int(d) ) # get digits from string
+ 
+r = s + " -> {}00 + {}0 + {}".format(*digits)
+ 
+print(r)
+"""
+"""
+def get_digits(n):
+	digits = [n%10]
+	n = n//10
+	while n > 0:
+		digits.insert(0, n%10)
+		n = n // 10
+	return digits
+"""
+"""
+n=int(input())
+print(get_digits(n))
+"""
+m = int(input())
+l= [int(d) for d in str(m)]
+for i in range(len(l)):
+  print(l[i],end="")
